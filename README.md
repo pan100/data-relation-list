@@ -1,0 +1,2 @@
+# data-relation-list
+data-relationlist is a concept to move bidirectional linking between two related web sites away from the servers of a social network. There is also an API protocol to request a bidirectional connection. The bidirectional relations lists are stored by both relations and not at a third party site. The servers then control each other. There are also possibilities for feed syndication based on your own relation list if sites contain info about its feed. In this way we make the web more social without the need of a central social network.
