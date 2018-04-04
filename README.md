@@ -3,8 +3,10 @@ data-relationlist is a concept to move bidirectional linking between two related
 
 A webmaster at url A contains or links to a page with this structure:
 
+```html
 <ul data-relation-list data-relation-api="http://www.someserver.com/relations-api">
 </ul>
+```
 
 A mechanism for adding and further periodic checks ensures double linking.
 
@@ -20,9 +22,11 @@ Website B sends a GET to http://www.someserver.com/relations-api/ and gets this 
 B is now ready to send a relation request.
 First B adds info to its own UL at http://www.differentserver.com/relations:
 
+```html
 <ul data-relation-list data-relation-api="http://www.differentserver.com/relations-api">
     <li style="display:none" data-relation-pending><a href="http://www.someserver.com">Some Server</a> - <span data-relationtype>acquaintance</span></li>
 </ul>
+```
 
 Then B sends a POST request to A (http://www.someserver.com/relations-api) containing:
 
@@ -38,9 +42,11 @@ A now has received the relation request and awaits manual response. Let's say A 
 A checks the ul of B and finds the li and sees that it is correct. Then A adds the relation to its own
 ul:
 
+```html
 <ul data-relation-list data-relation-api="http://www.someserver.com/relations-api">
     <li><a href="http://www.differentserver.com">Different Server</a> - <span data-relationtype>acquaintance</span></li>
 </ul>
+```
 
 It links back but it is visible and does not contain the data-relation-pending attribute.
 Then A sends a post to B (http://www.differentserver.com/relations-api):
