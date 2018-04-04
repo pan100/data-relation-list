@@ -59,9 +59,11 @@ Then A sends a post to B (http://www.differentserver.com/relations-api):
 
 B can now check that the ul at its location is correct and correct its own ul:
 
+```html
 <ul data-relation-list data-relation-api="http://www.differentserver.com/relations-api">
     <li><a href="http://www.someserver.com">Some Server</a> - <span data-relationtype>acquaintance</span></li>
 </ul>
+```
 
 Now the two sites are linking to each other with the given relation "acquaintance".
 To ensure the two way linking the sites can now periodically automatically check each other's ul.
